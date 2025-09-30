@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"ObjPL",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"ObjColisao",
+  "eventList":[],
   "managed":true,
-  "name":"ObjPL",
+  "name":"ObjColisao",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite1",
-    "path":"sprites/Sprite1/Sprite1.yy",
+    "name":"SprColisao",
+    "path":"sprites/SprColisao/SprColisao.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

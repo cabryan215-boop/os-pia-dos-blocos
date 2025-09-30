@@ -34,8 +34,11 @@
   },
   "name":"Pixel Game",
   "resources":[
+    {"id":{"name":"ObjBola","path":"objects/ObjBola/ObjBola.yy",},},
+    {"id":{"name":"ObjColisao","path":"objects/ObjColisao/ObjColisao.yy",},},
     {"id":{"name":"ObjPL","path":"objects/ObjPL/ObjPL.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"SprColisao","path":"sprites/SprColisao/SprColisao.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
     {"id":{"name":"Sprite2","path":"sprites/Sprite2/Sprite2.yy",},},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
