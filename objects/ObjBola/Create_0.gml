@@ -17,7 +17,6 @@ y=ObjPL.y-10
 //podemos criar objestos proprios para bolas que provem de blocos (vamos usar esse metodo pois eu que dei a ideia e eu sou foda)
 //apesar da bola iniciar noi lugar certo ela nao segue o player para seguir teremos que usar uma outra funçao no step
 isStart=false //esta deve ser uma variavel global
-isStart=false //esta deve ser uma variavel global
 
 
 

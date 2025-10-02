@@ -1,4 +1,4 @@
-velocidade=3
+velocidade=6
 /*agora queremos criar as vidas para criar as vidas para criar para criar uma variedade global,usamos global,usamos
 global.(nome da variavel)
 seria global.vida= 3
