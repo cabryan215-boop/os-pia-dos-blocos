@@ -10,7 +10,7 @@
 //o jogo nao começar e de true para false quando o jogo iniciar pararemos de seguir o player
 //parta invertero valor para true e false temos um operador para isso voces sabem qual é? a "!"(em outras linguagens podemos usar como not)
 //entao se o jogo nao começou podemos seguir op player
-if ! isStart{
+if ! global.isStart{
   //seguindo o player 
   x=ObjPL.x
   //e agora caso opertemos para cima a bola deve se mover e alterar o isStartpara true
@@ -31,7 +31,7 @@ if ! isStart{
 	  }
    
    //indique que o jogo foi iniciado com isStart recbendo true
-     isStart=true
+     global.isStart=true
    }
 }
 // se o jogo ja começou

@@ -1,0 +1,11 @@
+//queremos criar aq chance de nscer um bloco com uma bola
+//para isto usaremos uma funçao para aleatortizar os numerods
+//a chance e um bloco nascer com uma bola dentro sera de 1 para 15
+//funçao random_range(n1:vqalor range,n2:valor real) retorno real
+/*
+esta funçao e similar ao random_range(),mas apenas com os numeos inteiros 
+n1 o menor valor posivel do intervalo sera sorteado
+n1 o maior valor posivel do intervalo sera sorteado
+
+e caso o numero sortedo seja o 15,ele iniciara com uma bola dentrro
+*/

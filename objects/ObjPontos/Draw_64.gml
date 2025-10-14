@@ -76,4 +76,54 @@ mensagem=string(global.pontos)
 draw_text(x,y,mensagem )
 //para finalizar vamos colocar mais zeros na frente
 //e agora desenhamos na tela tambem colocamos para ela ir para o meio da tela mas mas vamos perceber que o texto nao esta no nmeio
-//
+//pois a orientaçao npormal e na esquerda 
+//para trocarmo a direçao usaremos a funçao draw_set_haling():
+//para definir a centralizacao usaremos a funçao 
+// draw_set_haling():
+//function draw set halling(haling: constant.halingn) ->
+//undfined
+//this function is used to aling text long the horizontal axis 
+//and changing the horizon alignment will
+//change teh position and direction in which all
+//further text is drawn with the defalt value being fa_left 
+//haling horizontal aligment
+
+//traduçao:
+//funçao draw set halling(haling: constant.horizontal) ->
+//retorno vazio ou indefinido 
+//esta funçao é usada para alinhar o texto no eixo horizontal e mudar o alinhamento 
+//horizontal e ira mudar a posiçao e a direçao em tudo
+//os textos desenhados como com o padrao sdendo iniciar pela equerda(fa_left)
+//halingn alinhamento horizontal
+//aqui as possiveis variaveis sao
+//fa_left:para a esquerda
+//fa_center:para o centro
+//fa_right:para a direita 
+//no caso iremos usar a fa_center
+//draw_set_valing():
+/*function draw_set_valign():
+undefinid this function is used to aling text along the vertical exis and 
+changuing in which all furt
+draw_set_valign():
+function draw_set_valign(valign: Constant.VAlign) -> Undefined
+This function is used to align text along the vertical axis and
+- changing the vertical alignment will change the position and -
+- direction in which all further text is drawn, with the default -
+- value being fa_top.
+valign Vertical alignment.
+
+Função draw_set_valign(valign: Constante. alinhamnto vertical) -
+- retorno vazio ou indefinido
+Esta função é usada pra alinhar o texto no eixo vertical e mudar -
+- o alinhamento vertical e irá mudar a posição e a direção em todos -
+- os texto desenhados, com o padrão sendo iniciar pelo topo
+valign Alinhamento vertical
+Aqui as possiveis variáveis são:
+fa_top: Para o topo
+fa_middle: Para o meio
+fa_bottom: Para baixo
+No caso iremos usar a fa_top, então não necessáriamente teremos que 
+- utilizar esta função, mas já fica de ensinamento
+*/
+draw_set_halign(fa_top)
+draw_text(room_width / 2,y,mensagem)

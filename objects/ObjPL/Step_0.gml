@@ -41,7 +41,7 @@ Ou seja, keyboard_check(vk_left) or keyboard_check(ord("A"))
 
 teclaEsquerda = keyboard_check(vk_left) or keyboard_check(ord("A"))
 
-//Mesma lógica para direita
+
 teclaDireita = keyboard_check(vk_right) or keyboard_check(ord("D"))
 
 /*
