@@ -12,7 +12,19 @@ entao vamos configurar 4 coisas
 
 */
 //primeiro tiraremos 1 vida
+//vamos mecher alguns objetos de ligar por enquanto e diminuir a quantidade de boloas recriar o obj morte e destruir a bola
+//que saiu sendo a condida se a quantidade de bola seja igual a 0
+global.quantBolas--
+instance_destroy()
+//agora caso a quantidade de bolas seja maior que 0 iremos apenas fazer a animacoa 
+//e caso a quantidade seja maior que 0 
+if global.quantBolas>0{
+	instance_create_layer(x,room_height,"instances",ObjMorte)
+	exit
+}
 global.vidas--
+global.isStart=false
+
 //segundfo criare uma animaçao de morte [
 //so que para isso criasremos um novo obj chamado de objMorte
 //e aoprendendo como criar novas instancias dentro do codigo
@@ -48,4 +60,11 @@ instance_destroy()
 e o ultimo passo,recriar a bolinha  encima do player
 */
 instance_create_layer(ObjPL.x,ObjPL.y-10,"instances",ObjBola)
-global.isStart = false
+//global.isStart = false
+//percebemos que quado quaquel bolinha conta como um vida a menos tnewdo uma bolionha ou mais na tela sobrando entao o que faremos 
+//voces se lemram do break?
+//para quem nao lembra o btreak saia do laço de repetiçao quando aparecia por exemplo quando um num ero for divisivel por i ele saia do laço de repetiçaoi inddependentes
+//do quew acinteceu aqntes agora noisa iremos usar algo parecido que no caso e o exit 
+//o exitr sai no codigo do event assim que e chamado
+//no nosso caso iremos criar o contador de bolinhas e assim que a ultima boloinha saire ai sim mecheremos na vida
+

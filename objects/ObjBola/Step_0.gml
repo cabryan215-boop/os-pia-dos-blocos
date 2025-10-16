@@ -13,6 +13,7 @@
 if ! global.isStart{
   //seguindo o player 
   x=ObjPL.x
+  y=ObjPL.y - 10
   //e agora caso opertemos para cima a bola deve se mover e alterar o isStartpara true
   if keyboard_check(vk_up)or keyboard_check(ord("W")) or keyboard_check(vk_space){
 	  //vai para cima

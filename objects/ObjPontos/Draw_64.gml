@@ -71,9 +71,9 @@ else{
 	mensagem=string(global.pontos)
 }
 draw_set_font(fntPontos)
-mensagem=string(global.pontos)
+//mensagem=string(global.pontos)
 //e agora mostramos na tela
-draw_text(x,y,mensagem )
+//draw_text(x,y,mensagem )
 //para finalizar vamos colocar mais zeros na frente
 //e agora desenhamos na tela tambem colocamos para ela ir para o meio da tela mas mas vamos perceber que o texto nao esta no nmeio
 //pois a orientaçao npormal e na esquerda 

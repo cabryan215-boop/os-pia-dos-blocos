@@ -9,3 +9,9 @@ n1 o maior valor posivel do intervalo sera sorteado
 
 e caso o numero sortedo seja o 15,ele iniciara com uma bola dentrro
 */
+tipoBloco=irandom_range(1,15)
+
+if tipoBloco == 15{
+	//trocar o sprite por um com a bola dentro
+	sprite_index=SprBlocoBola
+}
