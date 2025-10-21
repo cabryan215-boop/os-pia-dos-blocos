@@ -40,6 +40,7 @@
     {"id":{"name":"ObjBloco","path":"objects/ObjBloco/ObjBloco.yy",},},
     {"id":{"name":"ObjBola","path":"objects/ObjBola/ObjBola.yy",},},
     {"id":{"name":"ObjColisao","path":"objects/ObjColisao/ObjColisao.yy",},},
+    {"id":{"name":"ObjCriadorBlocos","path":"objects/ObjCriadorBlocos/ObjCriadorBlocos.yy",},},
     {"id":{"name":"ObjMorte","path":"objects/ObjMorte/ObjMorte.yy",},},
     {"id":{"name":"ObjPL","path":"objects/ObjPL/ObjPL.yy",},},
     {"id":{"name":"ObjPontos","path":"objects/ObjPontos/ObjPontos.yy",},},

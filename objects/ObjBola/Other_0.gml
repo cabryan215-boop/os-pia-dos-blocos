@@ -51,11 +51,11 @@ basicamente toda vez que quisermos criar uma instancia usareos essa funçao port
 quando a bolinha sair vamos criar a isntancia obj moprte [onde a bolinha saiu
 
 */
-instance_create_layer(x,room_height,"instances",ObjMorte)
+//instance_create_layer(x,room_height,"instances",ObjMorte)
 //agora que testamos e fuuncionou teremos aue apagar a explosao depois de um tempo
 //para criar algo depois de um tempo iremos usar o evento de alarm a explicaçao estara no evento de criaçao do ObjMorte
 //agora vamos fazer o 3 destruir a bolinha que saiu isso ja sabemos basta usar o instance_destroy()
-instance_destroy()
+//instance_destroy()
 /*
 e o ultimo passo,recriar a bolinha  encima do player
 */
