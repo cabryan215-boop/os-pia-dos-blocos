@@ -15,3 +15,9 @@ if tipoBloco == 15{
 	//trocar o sprite por um com a bola dentro
 	sprite_index=SprBlocoBola
 }
+if !variable_global_exists("quantBlocos"){
+	global.quantBlocos=1
+}
+else{
+	global.quantBlocos++
+}

@@ -1,4 +1,4 @@
-quantBlocos=0
+//quantBlocos=0
 linhas=6
 colunas=6
 //a ultima linha tem que estar no 475

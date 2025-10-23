@@ -1,3 +1,6 @@
+if global.isFim{
+	exit
+}
 /*
 agora e so mostrarb se a quantidade de vbida sobrando atraves dos sprites para isto
 vamos usar o identificador como exemplo nos ja sabemos que eu tenho 2 vidas serea 1 bolinha 

@@ -1,3 +1,6 @@
+if global.isFim{
+	exit
+}
 /*
 esee evento e gerado toda vez que abolinha sai da tela
 no nosso quando a instancia objbola sai da tela

@@ -1,3 +1,6 @@
+if global.isFim{
+	exit
+}
 //primeiro vamos seguir o x do player 
 //jeito errado de seguir o player 
 //x=ObjPL.x

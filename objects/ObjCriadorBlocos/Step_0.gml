@@ -1,3 +1,6 @@
+if global.isFim{
+	exit
+}
 /*
 aqui,toda vez uqe a quantidad3 de bloosa chegar q zero cpmeçaremos a criar a blocos como como criaremos mais de 1 
 terewmos que usar o laço de repetiçao
@@ -10,7 +13,7 @@ e depoius que tivermos certeza que tudo foi criado corretamwentew faremos eles e
 
 entao criamos a variavel de linhas
 */
-if quantBlocos==0{
+if global.quantBlocos==0{
 	i=0
 	while i<linhas{
 		j=1
@@ -33,7 +36,7 @@ if quantBlocos==0{
 		//e depois mandar descer 
 		instance_create_layer(64*j,475,"instances",ObjBloco)
 		j++
-		quantBlocos++
+		global.quantBlocos++
 		
 		}
 		i++
