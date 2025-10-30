@@ -10,3 +10,7 @@ global.quantBlocos--
 if tipoBloco == 15{
 	instance_create_layer(x,y,"instances",ObjBola)
 }
+//caso o bloco seja de coraçao 
+if tipoBloco == 16 and global.quantVidas<3{
+	instance_create_layer(x,y,"instances",ObjVida)
+}

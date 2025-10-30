@@ -16,5 +16,5 @@ if identificadorVida>=global.vidas {
 	sprite_index=sprVidaUsada
 }
 else{
-	sprite_index=sprVida
+	sprite_index=sprBolaVida
 }

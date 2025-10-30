@@ -2,8 +2,8 @@
 toda vez que clicarmos uma vez no objeto restart ele reinivciara o jogo 
 e fara a tela de morte sumir
 */
-layer_set_visible("TelaMorte",true)
-layer_set_visible("TelaMorteFundo",true)
+layer_set_visible("TelaMorte",false)
+layer_set_visible("TelaMorteFundo",false)
 global.isFim=false
 //assim que resetamos percebemos que as outras variaveis globais nao sao reiniciadqas jntas
 //isso acontece pois a existincia das variaveis globais nao sao apagadas,e la no jogoaonde checamos a existencia
@@ -15,5 +15,6 @@ global.quantBlocos=0
 global.maiorPontos=0
 global.quantBolas=0
 global.quantVidas=0
+global.vidas = 3 
 
 room_restart()

@@ -16,7 +16,7 @@ if global.isFim{
 if ! global.isStart{
   //seguindo o player 
   x=ObjPL.x
-  y=ObjPL.y - 10
+  y=ObjPL.y - 20
   //e agora caso opertemos para cima a bola deve se mover e alterar o isStartpara true
   if keyboard_check(vk_up)or keyboard_check(ord("W")) or keyboard_check(vk_space){
 	  //vai para cima
@@ -58,19 +58,47 @@ else{
 	//ou seja a esquerda ou a direita 
 	//colisao na esquerda 
 	//usaremos o objeto de colisao para testar as colisoes mais facilmente 
-	if place_meeting(x-velocidade,y,ObjColisao){
-		direcaoHorizontal=1
-	}
-	if place_meeting(x+velocidade,y,ObjColisao){
-	    direcaoHorizontal=-1
-	}
 	if place_meeting(x,y-velocidade,ObjColisao){
-		direcaoVertical=1
+		direcaoVertical*=-1
+		direcaoHorizontal=1*sign(direcaoHorizontal)
+		//direcaoHorizontal=1*sign(direcaoHorizontal)
 	
 	}
-	if place_meeting(x,y+velocidade,ObjPL){
-		direcaoVertical=-1
+	else if place_meeting(x-velocidade,y,ObjColisao){
+		direcaoHorizontal*=-1
+		direcaoVertical=1*sign(direcaoVertical)
+		//direcaoVertical=1*sign(direcaoVertical)
+	}
+	else if place_meeting(x+velocidade,y,ObjColisao){
+	    direcaoHorizontal*=-1
+		direcaoVertical=1*sign(direcaoVertical)
+		//d/irecaoVertical=1*sign(direcaoVertical)
+	}
 	
+	else if place_meeting(x,y+velocidade,ObjPL){
+		direcaoVertical=-1
+		//direcaoHorizontal=1*sign(direcaoHorizontal)
+		//entaso vamos faze4r o calculo na altura da direcao de onde abloa deve ir 
+		//vamos as seguntes condiçoes o x da bolae do playersao originados diretamente no meio
+		//entao para cada as distancias fazer a subtraçao do x da bola para o x do player 
+		distancia= x - ObjPL.x
+		if distancia<20 and distancia> -20{
+			direcaoHorizontal=0.2*sign(distancia)
+			direcaoVertical= -1.8
+		}
+		else if distancia<40 and distancia> -40{
+			direcaoHorizontal=0.5*sign(distancia)
+			direcaoVertical= -1.5
+		}
+		else if distancia<60 and distancia> -60{
+			direcaoHorizontal=1*sign(distancia)
+			direcaoVertical=-1 
+			
+		}
+		else{
+			direcaoHorizontal=1.5*sign(distancia)
+			direcaoVertical=- 0.5
+		}
 	}
 	//agora vamos começar as colisoes comos blocos
 	//primeiro vamos checar a direçao de onde ocorrera a colisao
@@ -112,8 +140,26 @@ else{
 		Função instance_place(x: valor Real, y: valor Real, obj? Id do tilemap, ou Asset. Objeto, ou Constante. todos os objetos ou um vetor de objetos) retorno id da instancia
 		Com esta função, você conseguegue  chegar uma posição aonde ocorrerá uma colisão se houve iremos receber o ID da instancia
 		e depois destruila
-		*/
+	
+	0*/
+	 if place_meeting(x,y-velocidade,ObjBloco){
+		 
+		blocoAcertado=instance_place(x,y-velocidade,ObjBloco)
 		
+		instance_destroy(blocoAcertado)
+		
+		direcaoVertical=1
+		direcaoHorizontal=1*sign(direcaoHorizontal)
+}
+	if place_meeting(x,y+velocidade,ObjBloco){
+		 
+		blocoAcertado=instance_place(x,y+velocidade,ObjBloco)
+		
+		instance_destroy(blocoAcertado)
+		
+		direcaoVertical=-1
+		direcaoHorizontal=1*sign(direcaoHorizontal)
+}	
 
 	if place_meeting(x-velocidade,y,ObjBloco){
 		
@@ -122,33 +168,23 @@ else{
 		instance_destroy(blocoAcertado)
 		
 		direcaoHorizontal=1
+		direcaoVertical=1*sign(direcaoVertical)
+		
 	
 	}
-	if place_meeting(x+velocidade,y,ObjBloco){
+
+	else if place_meeting(x+velocidade,y,ObjBloco){
 		
 		blocoAcertado=instance_place(x+velocidade,y,ObjBloco)
 		
 		instance_destroy(blocoAcertado)
 		
 		direcaoHorizontal=-1
+		direcaoVertical=1*sign(direcaoVertical)
 	
 	}
-	if place_meeting(x,y-velocidade,ObjBloco){
-		 
-		blocoAcertado=instance_place(x,y-velocidade,ObjBloco)
-		
-		instance_destroy(blocoAcertado)
-		
-		direcaoVertical=1
-}
-if place_meeting(x,y+velocidade,ObjBloco){
-		 
-		blocoAcertado=instance_place(x,y+velocidade,ObjBloco)
-		
-		instance_destroy(blocoAcertado)
-		
-		direcaoVertical=-1
-}
+	
+
 }
 //no final some as direçoes com as suas perspectivas variaveis vezes a velocidade 
 //x somo com a direçao horizontal
