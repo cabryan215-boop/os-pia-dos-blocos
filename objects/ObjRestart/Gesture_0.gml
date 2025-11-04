@@ -12,9 +12,10 @@ global.isFim=false
 global.AlturaCerta=false
 global.isStart=false
 global.quantBlocos=0
-global.maiorPontos=0
 global.quantBolas=0
 global.quantVidas=0
 global.vidas = 3 
-
+global.pontos = 0
+//salva o jogo
+salvarJogo()
 room_restart()

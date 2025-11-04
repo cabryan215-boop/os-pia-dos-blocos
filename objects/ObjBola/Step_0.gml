@@ -59,20 +59,35 @@ else{
 	//colisao na esquerda 
 	//usaremos o objeto de colisao para testar as colisoes mais facilmente 
 	if place_meeting(x,y-velocidade,ObjColisao){
-		direcaoVertical*=-1
-		direcaoHorizontal=1*sign(direcaoHorizontal)
+		if sign(armazenarAnguloVertical)== -1{
+			direcaoVertical= armazenarAnguloVertical* -1
+		}
+		else{
+			direcaoVertical=armazenarAnguloVertical
+		}
+		
 		//direcaoHorizontal=1*sign(direcaoHorizontal)
+		//na esquerda verificaempos novanete se e negativo pois nahorizontal o negativofaz ir na esquerda se for recebe apo contrqrio
+		//se nao for recebe normal
 	
 	}
+	//esquerda
 	else if place_meeting(x-velocidade,y,ObjColisao){
-		direcaoHorizontal*=-1
-		direcaoVertical=1*sign(direcaoVertical)
+		if sign(armazenarAnguloHorizontal)== -1{
+			direcaoHorizontal= armazenarAnguloHorizontal* -1
+		}
+		else{
+			direcaoHorizontal=armazenarAnguloHorizontal
+		}
 		//direcaoVertical=1*sign(direcaoVertical)
 	}
 	else if place_meeting(x+velocidade,y,ObjColisao){
-	    direcaoHorizontal*=-1
-		direcaoVertical=1*sign(direcaoVertical)
-		//d/irecaoVertical=1*sign(direcaoVertical)
+	   if sign(armazenarAnguloHorizontal)== 1{
+			direcaoHorizontal= armazenarAnguloHorizontal* -1
+		}
+		else{
+			direcaoHorizontal=armazenarAnguloHorizontal
+		}
 	}
 	
 	else if place_meeting(x,y+velocidade,ObjPL){
@@ -98,6 +113,8 @@ else{
 		else{
 			direcaoHorizontal=1.5*sign(distancia)
 			direcaoVertical=- 0.5
+			armazenarAnguloHorizontal=direcaoHorizontal
+			armazenarAnguloVertical=direcaoVertical
 		}
 	}
 	//agora vamos começar as colisoes comos blocos
@@ -147,18 +164,25 @@ else{
 		blocoAcertado=instance_place(x,y-velocidade,ObjBloco)
 		
 		instance_destroy(blocoAcertado)
-		
-		direcaoVertical=1
-		direcaoHorizontal=1*sign(direcaoHorizontal)
+		if sign(armazenarAnguloVertical)== -1{
+			direcaoVertical= armazenarAnguloVertical* -1
+		}
+		else{
+			direcaoVertical=armazenarAnguloVertical
+		}
 }
 	if place_meeting(x,y+velocidade,ObjBloco){
 		 
 		blocoAcertado=instance_place(x,y+velocidade,ObjBloco)
 		
 		instance_destroy(blocoAcertado)
+		if sign(armazenarAnguloVertical)== 1{
+			direcaoVertical= armazenarAnguloVertical* -1
+		}
+		else{
+			direcaoVertical=armazenarAnguloVertical
+		}
 		
-		direcaoVertical=-1
-		direcaoHorizontal=1*sign(direcaoHorizontal)
 }	
 
 	if place_meeting(x-velocidade,y,ObjBloco){
@@ -166,10 +190,15 @@ else{
 		blocoAcertado = instance_place(x-velocidade,y,ObjBloco)
 		
 		instance_destroy(blocoAcertado)
-		
-		direcaoHorizontal=1
-		direcaoVertical=1*sign(direcaoVertical)
-		
+		//aqui vamos verificar se o valor e neghativo pois na horizontal o negativo faa IR PARA ESQUERDA
+		//se for recebemos o valor ao cpontrario 
+		//se nao recebemos o valor normal
+		 if sign(armazenarAnguloHorizontal)== -1{
+			direcaoHorizontal= armazenarAnguloHorizontal* -1
+		}
+		else{
+			direcaoHorizontal=armazenarAnguloHorizontal
+		}
 	
 	}
 
@@ -179,11 +208,13 @@ else{
 		
 		instance_destroy(blocoAcertado)
 		
-		direcaoHorizontal=-1
-		direcaoVertical=1*sign(direcaoVertical)
-	
+		 if sign(armazenarAnguloHorizontal)== 1{
+			direcaoHorizontal= armazenarAnguloHorizontal* -1
+		}
+		else{
+			direcaoHorizontal=armazenarAnguloHorizontal
+		}
 	}
-	
 
 }
 //no final some as direçoes com as suas perspectivas variaveis vezes a velocidade 
