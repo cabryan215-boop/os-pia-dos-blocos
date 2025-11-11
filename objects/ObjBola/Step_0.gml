@@ -72,7 +72,7 @@ else{
 	
 	}
 	//esquerda
-	else if place_meeting(x-velocidade,y,ObjColisao){
+	if place_meeting(x-velocidade,y,ObjColisao){
 		if sign(armazenarAnguloHorizontal)== -1{
 			direcaoHorizontal= armazenarAnguloHorizontal* -1
 		}
@@ -81,7 +81,8 @@ else{
 		}
 		//direcaoVertical=1*sign(direcaoVertical)
 	}
-	else if place_meeting(x+velocidade,y,ObjColisao){
+	
+	if place_meeting(x+velocidade,y,ObjColisao){
 	   if sign(armazenarAnguloHorizontal)== 1{
 			direcaoHorizontal= armazenarAnguloHorizontal* -1
 		}
@@ -91,7 +92,7 @@ else{
 	}
 	
 	else if place_meeting(x,y+velocidade,ObjPL){
-		direcaoVertical=-1
+
 		//direcaoHorizontal=1*sign(direcaoHorizontal)
 		//entaso vamos faze4r o calculo na altura da direcao de onde abloa deve ir 
 		//vamos as seguntes condiçoes o x da bolae do playersao originados diretamente no meio
@@ -113,9 +114,11 @@ else{
 		else{
 			direcaoHorizontal=1.5*sign(distancia)
 			direcaoVertical=- 0.5
-			armazenarAnguloHorizontal=direcaoHorizontal
-			armazenarAnguloVertical=direcaoVertical
+			
 		}
+		
+		armazenarAnguloHorizontal=direcaoHorizontal
+			armazenarAnguloVertical=direcaoVertical
 	}
 	//agora vamos começar as colisoes comos blocos
 	//primeiro vamos checar a direçao de onde ocorrera a colisao
@@ -170,7 +173,8 @@ else{
 		else{
 			direcaoVertical=armazenarAnguloVertical
 		}
-}
+	}
+	
 	if place_meeting(x,y+velocidade,ObjBloco){
 		 
 		blocoAcertado=instance_place(x,y+velocidade,ObjBloco)
@@ -202,7 +206,7 @@ else{
 	
 	}
 
-	else if place_meeting(x+velocidade,y,ObjBloco){
+	if place_meeting(x+velocidade,y,ObjBloco){
 		
 		blocoAcertado=instance_place(x+velocidade,y,ObjBloco)
 		

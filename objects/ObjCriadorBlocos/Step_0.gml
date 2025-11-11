@@ -14,6 +14,9 @@ e depoius que tivermos certeza que tudo foi criado corretamwentew faremos eles e
 entao criamos a variavel de linhas
 */
 if global.quantBlocos==0{
+	
+	global.AlturaCerta=false
+	
 	i=0
 	while i<linhas{
 		j=1
@@ -34,7 +37,7 @@ if global.quantBlocos==0{
 		//aqui nao tem problema de começar fora da tela pois no jogo os blocos aparecem descendo assim qe acaba o jogo por isso iremos criar
 		//os blocos fora de tela 
 		//e depois mandar descer 
-		instance_create_layer(64*j,475,"instances",ObjBloco)
+		instance_create_layer(110*j,-64 * i,"instances",ObjBloco)
 		j++
 		global.quantBlocos++
 		
